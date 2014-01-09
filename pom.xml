@@ -1,0 +1,143 @@
+<project
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>logTail</groupId>
+	<artifactId>logTail-war</artifactId>
+	<version>1</version>
+	<packaging>war</packaging>
+	<properties>
+		<jdk.version>1.6</jdk.version>
+		<slf4j.version>1.6.1</slf4j.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<timestamp>${maven.build.timestamp}</timestamp>
+		<maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
+		<org.atmosphere-version>2.0.5</org.atmosphere-version>
+		<atmosphere-jquery>1.1.0.RC3</atmosphere-jquery>
+		<logback-version>1.0.13</logback-version>
+		<jersey-version>1.18</jersey-version>
+	</properties>
+	<dependencies>
+		<!-- atmosphere -->
+		<dependency>
+			<groupId>org.atmosphere</groupId>
+			<artifactId>atmosphere-jersey</artifactId>
+			<version>${org.atmosphere-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.atmosphere</groupId>
+			<artifactId>atmosphere-jquery</artifactId>
+			<version>${atmosphere-jquery}</version>
+			<type>war</type>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-json</artifactId>
+			<version>${jersey-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-server</artifactId>
+			<version>${jersey-version}</version>
+		</dependency>
+		<!-- Atmosphere Weblogic -->
+		<dependency>
+			<groupId>org.atmosphere</groupId>
+			<artifactId>atmosphere-weblogic</artifactId>
+			<version>2.1.0-RC2</version>
+		</dependency>
+		<!-- Logging -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>${logback-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-core</artifactId>
+			<version>${logback-version}</version>
+		</dependency>
+		<!-- Utils -->
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.6</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.2.4</version>
+		</dependency>
+		<!-- needed in WebLogic -->
+		<!-- <dependency> <groupId>xerces</groupId> <artifactId>xerces</artifactId> <version>2.4.0</version> </dependency> <dependency> <groupId>xalan</groupId> <artifactId>xalan</artifactId> <version>2.7.1</version> 
+			</dependency> <dependency> <groupId>xalan</groupId> <artifactId>serializer</artifactId> <version>2.7.1</version> </dependency> -->
+	</dependencies>
+	<repositories>
+		<repository>
+			<id>maven.central</id>
+			<name>Maven Central</name>
+			<url>https://maven.vilt-group.com/content/repositories/central</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>com.vilt.infrastructure.thirdparty</id>
+			<name>VILT Infrastructure Thirdparty Repository</name>
+			<url>https://maven.vilt-group.com/content/repositories/infrastructure-thirdparty/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>com.vilt.infrastructure.releases</id>
+			<name>VILT Infrastructure Releases Repository</name>
+			<url>https://maven.vilt-group.com/content/repositories/infrastructure-releases/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>com.vilt.snapshots</id>
+			<name>VILT Snapshots Repository</name>
+			<url>https://maven.vilt-group.com/content/repositories/snapshots//</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>org.codehaus.snapshots</id>
+			<name>Codehaus Snapshots Repository</name>
+			<url>https://maven.vilt-group.com/content/repositories/codehaus-snapshots/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+	<prerequisites>
+		<maven>3.0.4</maven>
+	</prerequisites>
+</project>

@@ -1,0 +1,104 @@
+* {
+	font-family: tahoma;
+	font-size: 12px;
+	padding: 0px;
+	margin: 0px;
+}
+
+p {
+	line-height: 18px;
+}
+
+div {
+	width: 960px;
+	margin-left: 50px;
+	margin-right: auto;
+}
+
+#logArea {
+	padding: 5px;
+	background: #ddd;
+	border-radius: 5px;
+	border: 1px solid #CCC;
+	margin-top: 10px;
+	overflow: auto;
+	resize: both;
+	width: 960px;
+	height: 500px;
+}
+
+#header {
+	padding: 5px;
+	background: #fdf;
+	border-radius: 5px;
+	border: 1px solid #CCC;
+	margin-top: 10px;
+}
+
+#input {
+	border-radius: 2px;
+	border: 1px solid #ccc;
+	margin-top: 10px;
+	padding: 5px;
+	width: 400px;
+}
+
+#status {
+	width: 588px;
+	display: block;
+	float: left;
+	margin-top: 15px;
+}
+
+
+/*ComboBox*/
+/* The CSS */
+select {
+    padding:3px;
+    margin: 0;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    background: #f8f8f8;
+    color:#888;
+    border:none;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+}
+
+/* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    select {padding-right:18px;width:350px;}
+}
+
+label {position:relative}
+label:after {
+    content:'<>';
+    font:11px "Consolas", monospace;
+    color:#aaa;
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    transform:rotate(90deg);
+    right:8px; top:2px;
+    padding:0 0 2px;
+    border-bottom:1px solid #ddd;
+    position:absolute;
+    pointer-events:none;
+}
+label:before {
+    content:'';
+    right:6px; top:0px;
+    width:20px; height:20px;
+    background:#f8f8f8;
+    position:absolute;
+    pointer-events:none;
+    display:block;
+}
